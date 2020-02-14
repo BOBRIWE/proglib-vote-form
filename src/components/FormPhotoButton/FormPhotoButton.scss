@@ -1,13 +1,19 @@
 .FormPhotoButton {
-  border: 1px solid #378ff6;
-  padding: 20px;
-  font-size: 14px;
-  border-radius: 4px;
-  background-color: #ffffff;
-  color: #000000;
-  font-weight: bold;
+  &__button {
+    border: 1px solid #378ff6;
+    padding: 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
 
-  display: flex;
+    display: flex;
+  }
+
+  &__file-input {
+    display: none;
+  }
 
   &__text {
     margin-left: 10px;

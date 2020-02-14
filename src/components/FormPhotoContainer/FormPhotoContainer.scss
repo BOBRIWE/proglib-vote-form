@@ -1,0 +1,13 @@
+.FormPhotoContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  column-gap: 5px;
+  row-gap: 5px;
+
+  &__item {
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+}
