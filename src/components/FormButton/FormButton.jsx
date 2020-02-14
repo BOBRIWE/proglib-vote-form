@@ -1,12 +1,18 @@
 import React from "react";
 import './FormButton.scss';
 
-function FormButton() {
-    return (
-        <button className="FormButton">
-            Сохранить
-        </button>
-    );
+class FormButton extends React.Component {
+    onClick(e) {
+        this.props.onClick(e);
+    }
+
+    render() {
+        return (
+            <button onClick={this.onClick.bind(this)} className="FormButton">
+                {this.props.title}
+            </button>
+        );
+    }
 }
 
 export default FormButton;
