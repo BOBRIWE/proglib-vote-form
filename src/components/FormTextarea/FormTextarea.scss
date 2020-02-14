@@ -1,6 +1,12 @@
 .FormTextarea {
     font-size: 16px;
 
+    &__wrapper {
+        display: grid;
+        grid-template-columns: auto min-content;
+        color: #b8c9df;
+    }
+
     &__input {
         width: 100%;
         border: none;
@@ -14,6 +20,11 @@
 
         &::placeholder {
             color: #b8c9df;
+        }
+
+        &--small {
+            font-size: 16px;
+            height: 19px;
         }
     }
 

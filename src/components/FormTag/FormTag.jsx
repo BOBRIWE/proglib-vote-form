@@ -20,7 +20,7 @@ class FormTag extends React.Component {
                     defaultChecked={this.state.checked}
                     className="FormTag__checkbox"
                     name="tags[]"
-                    value={this.props.tagId}
+                    defaultValue={this.props.tagId}
                 />
                 <button
                     className={`FormTag__button ${this.state.checked ? 'FormTag__button--active' : ''}`}

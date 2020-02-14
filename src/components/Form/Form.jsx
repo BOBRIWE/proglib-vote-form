@@ -18,9 +18,9 @@ function Form() {
                     <FormTag tagId="4" tagName="HTML"/>
                 </header>
                 <main className="Form__main">
-                    <FormTextarea/>
-                    <FormInput/>
-                    <FormInput/>
+                    <FormTextarea validate={(str) => {return str.length > 0}} name="title" placeholder="Заголовок" max={120}/>
+                    <FormTextarea validate={(str) => {return str.length > 0}} name="question" placeholder="Что вы хотите обсудить?" type="small" max={200}/>
+                    <FormTextarea validate={(str) => {return str.length > 0}} name="vote-title" placeholder="Задайте вопрос" type="small"/>
                     <FormVote/>
                 </main>
                 <footer>
