@@ -1,0 +1,15 @@
+.FormVoteItem {
+  &__input {
+    padding: 15px;
+    border: 1px solid #b8c9df;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: #b8c9df;
+    }
+  }
+}

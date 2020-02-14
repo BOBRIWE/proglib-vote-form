@@ -1,0 +1,25 @@
+.FormInput {
+  font-size: 16px;
+
+  &__input {
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    color: #000000;
+    height: 19px;
+    overflow: hidden;
+    resize: none;
+    padding: 0;
+
+    &::placeholder {
+      color: #b8c9df;
+    }
+  }
+
+  &__error {
+    font-size: .8em;
+    color: #ff0000;
+    margin-bottom: 10px;
+  }
+}
