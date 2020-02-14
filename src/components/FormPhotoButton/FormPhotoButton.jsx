@@ -27,7 +27,7 @@ class FormPhotoButton extends React.Component {
                     <img src={photoIcon}/>
                     <span className="FormPhotoButton__text">Фото</span>
                 </button>
-                <input ref={this.inputRef} multiple className="FormPhotoButton__file-input" type="file" accept="image/*"/>
+                <input ref={this.inputRef} multiple className="FormPhotoButton__file-input" type="file" name="images[]" accept="image/*"/>
             </div>
         );
     }

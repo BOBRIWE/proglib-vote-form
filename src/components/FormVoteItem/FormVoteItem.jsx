@@ -10,6 +10,7 @@ class FormVoteItem extends React.Component {
     }
 
     onInput(e) {
+        this.props.onInput(e.target.value);
         this.setState({
             value: e.target.value
         });
@@ -29,8 +30,7 @@ class FormVoteItem extends React.Component {
                 {this.state.value !== null
                     ?
                     <div className="FormVoteItem__data-keep">
-                        <input type="hidden" name={`vote-data[${this.props.id}][id]`}/>
-                        <input type="hidden" name={`vote-data[${this.props.id}][text]`}/>
+                        <input type="hidden" name={`vote-data[][text]`} value={this.state.value}/>
                     </div> : null}
             </div>
         );

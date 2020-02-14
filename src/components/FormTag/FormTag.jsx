@@ -9,6 +9,13 @@ class FormTag extends React.Component {
 
     buttonClick(e) {
         e.preventDefault();
+
+        if (this.state.checked) {
+            this.props.removeTag(this.props.tagId);
+        } else {
+            this.props.addTag(this.props.tagId);
+        }
+
         this.setState({checked: !this.state.checked});
     }
 
@@ -17,10 +24,12 @@ class FormTag extends React.Component {
         return (
             <div className="FormTag">
                 <input
-                    defaultChecked={this.state.checked}
+                    type="checkbox"
+                    onChange={() => {}}
+                    checked={this.state.checked}
                     className="FormTag__checkbox"
                     name="tags[]"
-                    defaultValue={this.props.tagId}
+                    value={this.props.tagId}
                 />
                 <button
                     className={`FormTag__button ${this.state.checked ? 'FormTag__button--active' : ''}`}

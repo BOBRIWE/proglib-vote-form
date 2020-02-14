@@ -37,7 +37,7 @@ class FormPhotoContainer extends React.Component {
         return (
             <div className="FormPhotoContainer">
                 {this.state.urls.map((value, index, array) => {
-                    return <div className="FormPhotoContainer__item" key={index} onClick={this.imageClick.bind(this)} style={{'background-image': `url(${value})`}}/>
+                    return <div className="FormPhotoContainer__item" key={index} onClick={this.imageClick.bind(this)} style={{backgroundImage: `url(${value})`}}/>
                 })}
             </div>
         );

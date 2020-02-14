@@ -24,6 +24,7 @@ class FormTextarea extends React.Component{
     }
 
     onInput(e) {
+        this.props.onUpdate(e.target.value);
         this.autosize();
         this.setState({
             error: !this.props.validate(e.target.value) || this.props.max < e.target.value.length,
