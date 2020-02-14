@@ -3,9 +3,16 @@ import './App.css';
 import Form from '../Form/Form';
 
 function App() {
+    const tags = [
+        'React',
+        'JavaScript',
+        'Docker',
+        'Fetch',
+        'HTML'
+    ];
     return (
         <div className="App">
-            <Form submit={validate}/>
+            <Form tags={tags} submit={validate}/>
         </div>
     );
 }

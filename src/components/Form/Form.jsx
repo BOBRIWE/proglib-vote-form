@@ -41,10 +41,9 @@ class Form extends React.Component {
             <form ref={this.formRef}>
                 <article className="Form__view">
                     <header className="Form__tag-list">
-                        <FormTag addTag={this.addTag.bind(this)} removeTag={this.removeTag.bind(this)} tagId="1" tagName="React"/>
-                        <FormTag addTag={this.addTag.bind(this)} removeTag={this.removeTag.bind(this)} tagId="2" tagName="JavaScript"/>
-                        <FormTag addTag={this.addTag.bind(this)} removeTag={this.removeTag.bind(this)} tagId="3" tagName="Docker"/>
-                        <FormTag addTag={this.addTag.bind(this)} removeTag={this.removeTag.bind(this)} tagId="4" tagName="HTML"/>
+                        {this.props.tags.map((value, index) => {
+                            return <FormTag key={index} addTag={this.addTag.bind(this)} removeTag={this.removeTag.bind(this)} tagId={index} tagName={value}/>;
+                        })}
                     </header>
                     <main className="Form__main">
                         <FormTextarea onUpdate={(str) => {this.setState({title: str})}} validate={(str) => {return str.length > 0}} name="title" placeholder="Заголовок" max={120}/>
